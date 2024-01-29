@@ -32,7 +32,7 @@ class GetDataFromApiActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val data = response.body()
                     if (data!=null){
-                        adapterClass = UserAdapterClass(data!!)
+                        adapterClass = UserAdapterClass(data!!,applicationContext)
                         recyclerView.adapter=adapterClass
                     }
                     // Process the data as needed
