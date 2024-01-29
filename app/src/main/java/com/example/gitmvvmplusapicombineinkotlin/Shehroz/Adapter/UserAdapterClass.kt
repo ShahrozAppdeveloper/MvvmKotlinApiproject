@@ -30,4 +30,8 @@ class UserAdapterClass(var datalist:List<ResponseDataClassItem>,var context: Con
             }
         }
     }
+    fun updateData(newList: List<ResponseDataClassItem>) {
+        datalist = newList
+        notifyDataSetChanged()
+    }
 }
